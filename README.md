@@ -131,6 +131,19 @@ name the failing side so retries target correctly.
 | `--ai-explain` | Operate agent plan narration, off by default |
 | `--json` | Machine readable JSON output |
 
+### `agentia drift report`
+
+| Flag | Description |
+|---|---|
+| Same scope flags as check | Both ends plus optional pipeline |
+| `-o, --output <path>` | HTML report file path |
+| `--ai-explain` | Operate agent impact paragraph, off by default |
+| `--json` | Machine readable JSON output |
+
+Writes a cron friendly self contained HTML summary with a colored
+status banner, line counts and the optional AI paragraph. Same fetch
+plus error semantics as check.
+
 Sync proposes the plan and reveals operator run steps only after an
 explicit direction plus confirmation. Application itself always stays
 operator run since no write primitive is claimed.
