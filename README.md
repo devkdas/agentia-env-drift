@@ -144,6 +144,20 @@ Writes a cron friendly self contained HTML summary with a colored
 status banner, line counts and the optional AI paragraph. Same fetch
 plus error semantics as check.
 
+### `agentia drift baseline`
+
+| Flag | Description |
+|---|---|
+| `--save <name>` | Capture a baseline from live fetch or file |
+| `--list` | Browse saved baselines |
+| `--diff <name>` | Compare live content against a baseline |
+| `--content-file <path>` | Offline capture source instead of fetching |
+| Same scope flags as check | Type, member, credentials, orgs, pipeline |
+| `-j, --json` | Machine readable JSON output |
+
+Named baselines make drift checks production useful: capture once from
+a file or a live fetch, compare on every run, list anytime.
+
 Sync proposes the plan and reveals operator run steps only after an
 explicit direction plus confirmation. Application itself always stays
 operator run since no write primitive is claimed.
