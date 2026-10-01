@@ -121,6 +121,20 @@ name the failing side so retries target correctly.
 | `--ai-explain` | Operate agent impact explanation, off by default |
 | `-j, --json` | Machine readable JSON output |
 
+### `agentia drift sync`
+
+| Flag | Description |
+|---|---|
+| Same scope flags as check | Both ends plus optional pipeline |
+| `--direction source\|target` | Declared winning side for the plan |
+| `-y, --yes` | Reveal the apply runbook |
+| `--ai-explain` | Operate agent plan narration, off by default |
+| `--json` | Machine readable JSON output |
+
+Sync proposes the plan and reveals operator run steps only after an
+explicit direction plus confirmation. Application itself always stays
+operator run since no write primitive is claimed.
+
 ## Configuration
 
 Credential plus org pairs per end, optional pipeline scope. AI calls
